@@ -12,7 +12,6 @@ class WriteReadService {
 
     async getPostData(profession, dataPath) {
         let postData = await fs.readJson(dataPath)
-        console.log('JSON data for POST request', postData.first_name)
         return {
             name: postData.first_name,
             job: profession,
